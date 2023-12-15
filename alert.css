@@ -1,0 +1,55 @@
+.alert-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 900;
+    width: 45%;
+    height: 20%;
+}
+
+.alert-popup {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.alert-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.alert-popup p {
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+.confirm-btn,
+.cancel-btn {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.confirm-btn {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+}
+
+.cancel-btn {
+    background-color: #5bc0de;
+    color: white;
+    border: none;
+    margin-left: 10px;
+}

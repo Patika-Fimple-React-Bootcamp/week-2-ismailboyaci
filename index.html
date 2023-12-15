@@ -1,0 +1,54 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="modal.css">
+    <link rel="stylesheet" href="alert.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div class="post-container">
+            <!-- Comment for Post  -->
+        </div>
+        <div class="alert-container">
+            <!-- Alert Container -->
+        </div>
+        <div class="search-container d-flex justify-center">
+            <form class="search-form d-flex justify-end flex-row-reverse items-center">
+                <button class="clear-button d-none" type="button">
+                    <img src="./assets/clear.svg" alt="clear-icon" width="28px" class="clear-icon">
+                </button>
+                <input type="text" placeholder="Search.." class="search-input">
+                <img src="./assets/search.svg" alt="search-icon" width="24px" class="search-icon" for="search">
+            </form>
+        </div>
+        <div class="posts-container">
+            <!-- Post Card -->
+        </div>
+
+        <div class="nodata-container d-none">
+            <img src="./assets/exclamation.svg" alt="nodata-icon" width="64px">
+            <p class="nodata-text">no results found according to your search criteria.</p>
+        </div>
+
+        <div class="pagination-container">
+            <button class="pagination-button prev-button">
+                <img src="./assets/prev.svg" alt="prev-icon" width="24px">
+            </button>
+            <div class="numbers-container">
+                <!-- pagination numbers -->
+            </div>
+            <button class="pagination-button next-button">
+                <img src="./assets/prev.svg" alt="next-icon" width="24px">
+            </button>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>

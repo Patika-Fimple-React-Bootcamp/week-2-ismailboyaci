@@ -1,0 +1,247 @@
+:root {
+    --font-size: 16px;
+    --font-family: "Gill Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    background-color: #f4f4f4;
+}
+
+/* Display Utilities */
+.d-none {
+    display: none !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+/* Justify and Align */
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-row-reverse {
+    flex-direction: row-reverse;
+}
+
+/* Search Form */
+
+.search-form {
+    width: 50%;
+    margin-top: 1rem;
+    border: 1px solid black;
+    position: relative;
+    border-radius: 20px;
+}
+
+.search-input {
+    background: transparent;
+    width: calc(100% - 64px);
+    padding-left: 5px;
+    border: none;
+    outline: none; /* Remove default focus outline */
+}
+
+.search-icon {
+    margin: 5px;
+}
+
+.clear-button {
+    margin-right: 2px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    position: absolute;
+    right: 0;
+}
+
+/* Posts Container and Card Styles */
+
+.posts-container {
+    display: grid;
+    gap: 16px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.post-card {
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    align-items: flex-end;
+    transition: transform 0.3s ease-in-out;
+}
+
+.post-card:hover {
+    transform: scale(1.05);
+}
+
+.post-content {
+    margin-bottom: 8px;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+p {
+    margin: 0;
+    color: #666;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.delete-button {
+    margin-top: auto;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Pagination Styles */
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid;
+    border-radius: 16px;
+    bottom: 2%;
+    width: max-content;
+}
+
+.pagination-button {
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    background: transparent;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.pagination-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.active-page{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.next-button,
+.prev-button {
+    border-radius: 16px 0 0 16px;
+}
+
+.next-button {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.numbers-container {
+    display: flex;
+}
+
+.nodata-container {
+    /* left: 50%;
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    top: 50%; */
+        /* margin: auto; */
+        position: relative;
+        text-align: center;
+        margin: 100px, 100px;
+        /* margin: 56% 5%; */
+        width: 75%;
+        height: 80%;
+        margin: auto;
+        padding-top: 50px;
+}
+
+.nodata-container > img {
+    opacity: 0.55;
+}
+
+.nodata-text {
+    text-transform: uppercase;
+}
+
+/* Media Queries */
+
+@media (max-width: 767px) {
+    .posts-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .posts-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .posts-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
